@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html><head><title>Simple Calculator</title></head>
+<link rel="stylesheet" type="text/css" href="cal.css">
+<body>
+	<div class="container-fluid">
+	<table cellspacing-"2" align-"center" cellpadding-"8" border-"0">
+	<tr><td><label>Enter First number</label></td>
+		<td><input type="text" id="number1" value="0"><br></td></tr>
+	<tr><td><label>Enter second number</label></td>
+		<td><input type="text" id="number2" value="0"></td></tr><br>
+		<button type="button" onclick="add()">Add</button>
+		<button type="button" onclick="sub()">Subtract</button>
+		<button type="button" onclick="mul()">Multiply</button>
+		<button type="button" onclick="div()">Divide</button>
+		<button type="button" onclick="reset()">Reset</button>
+		<p id="result"></p>
+	</div>
+	
+	<script>
+		function add() {
+			var a = document.getElementById("number1").value;
+			var b = document.getElementById("number2").value;
+			var c= parseInt(a)+ parseInt(b);
+			
+			document.getElementById("result").innerHTML="Sum of number is:"+ c;
+		}
+		function sub() {
+			var a = document.getElementById("number1").value;
+			var b = document.getElementById("number2").value;
+			var c= parseInt(a)-parseInt(b);
+			
+			document.getElementById("result").innerHTML="Difference of number is:"+ c;
+		}
+		function mul() {
+			var a = document.getElementById("number1").value;
+			var b = document.getElementById("number2").value;
+			var c= parseInt(a)*parseInt(b);
+			
+			document.getElementById("result").innerHTML="Product of number is:"+ c;
+		}
+		function div() {
+			var a = document.getElementById("number1").value;
+			var b = document.getElementById("number2").value;
+			var c= parseInt(a)/parseInt(b);
+			
+			document.getElementById("result").innerHTML="Quotient of number is:"+ c;
+		}
+		function reset() {
+			document.getElementById("number1").value="0";
+			document.getElementById("number2").value="0";
+			document.getElementById("result").innerHTML= "Result is " + "0";
+		}
+	</script>
+		
+</body>
+</html>
+	
+			
